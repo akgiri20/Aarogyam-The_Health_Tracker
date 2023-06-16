@@ -1,0 +1,187 @@
+
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOCTOR LIST</title>
+
+</head>
+
+
+<body>
+
+<!-- component
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+ -->
+
+<!-- <div style="background-image: url('https://img.freepik.com/free-photo/front-view-delicious-chocolate-cake-stand-with-copy-space_23-2148834056.jpg?w=900&t=st=1674735902~exp=1674736502~hmac=1363a11c4c3df23f35426a50535f8a98220819dd1e1b28dac9215f7bb3a79fc3');  background-size: cover;  height:650px; padding-top:6px;" class=" text-black py-20">
+    <div class="container mx-auto flex flex-col md:flex-row my-6 md:my-21"> -->
+     
+<div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+  <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
+    <div class="rounded-t mb-0 px-4 py-3 border-0">
+      <div class="flex flex-wrap items-center">
+
+        <div class="relative w-full px-6 max-w-full flex-grow flex-1">
+          <strong>
+            <h1 class="font-semibold">DOCTORS LIST</h1>
+          </strong>
+        </div>
+        <!-- <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+          <button class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
+        </div> -->
+      </div>
+    </div>
+    <tbody>
+      <div class="block w-full ">
+        <table class="items-center bg-transparent  ">
+          <thead>
+            <tr>
+
+              <th class="px-6 bg-darksalmon-50 text-blueGray-500 align-middle  border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold ">
+                NAME
+              </th>
+              <th class="px-6 bg-darksalmon-50 text-blueGray-500  border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold ">
+                PHONE
+              </th>
+              <th class="px-6 bg-darksalmon-50 bg-color-purple text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold ">
+                CLINIC
+              </th>
+            </tr>
+          </thead>
+          <tr>
+            <% for (let doctors of doctorlist){%>
+              <%if(doctors.author.equals(currentUser._id)) {%>
+          <tr>
+          <tr class=" rows2 hover:bg-gray-100">
+            <td><%= doctors.name %> </td>
+            <td><%= doctors.phone %> </td>
+            <td><%= doctors.clinic %> </td>
+
+          </tr>
+        
+          </tr>
+          <% }%>
+          </tr>
+        </table>
+
+    </tbody>
+
+
+
+  </div>
+</div>
+<% } %>
+
+</body>
+
+
+<style>
+
+
+body{
+  background:url('https://res.cloudinary.com/dtca2p99y/image/upload/v1680926934/Screenshot_726_xteslj.png');
+  background-size:cover;
+}
+
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: honeydew;
+ 
+}
+
+h1,
+table {
+  text-align: center;
+  font-size: 4rem;
+  font-style: unset;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: 0 auto 5rem;
+  margin-bottom: 0;
+}
+
+table:hover {
+  cursor: pointer;
+}
+
+th {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: rgb(244, 246, 247);
+}
+
+td {
+  padding: 1.5rem;
+  font-size: 1.3rem;
+}
+
+h1 {
+  color: white;
+  font-weight: 40;
+  text-align: center;
+  font-family: copperplate gothic light;
+
+}
+
+h1 {
+  background-color: black;
+  opacity: 80%;
+}
+
+head {
+  size: 100%
+}
+
+.rows2{
+  background: hsl(183, 78%, 86%);
+  opacity:65%;
+  color: black;
+  font-weight: bold;
+  
+}
+
+tr,
+td {
+  transition: .4s ease-in;
+}
+
+tr:first-child {
+  background: hsla(91, 70%, 79%, 0.5);
+ 
+}
+
+tr:nth-child(even) {
+  background: hsla(198, 35%, 49%, 0.7);
+  opacity: 70%;
+}
+
+td:empty {
+  background: hsla(50, 25%, 60%, 0.7);
+}
+
+tr:hover:not(#firstrow),
+tr:hover td:empty {
+  background: rgb(228, 214, 183);
+  pointer-events: visible;
+}
+
+tr:hover:not(#firstrow) {
+  transform: scale(1.1);
+  font-weight: 700;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  size: 100%;
+}
+</style>

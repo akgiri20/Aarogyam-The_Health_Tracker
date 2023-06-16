@@ -1,0 +1,96 @@
+
+
+
+
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+      <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+          
+         
+          <div class="card">
+              <h1 class="text-center mb-4">CHECK YOUR HEALTH</h1>
+             
+              <form action="/healthlog" method="POST">
+                  <div class="row justify-content-between text-left">
+                    <label class="col-sm-4 col-lg-4">
+                      Enter Name
+                    </label>
+                  
+                    <div class="col-sm-8 col-lg-8">
+                      <input type="text" id="doctor" name="doctor" class="form-control" required>
+
+                  </div>
+                 
+                  
+                  <div class="col-sm-8 col-lg-8">
+                    <label class="col-sm-4 col-lg-4">
+                      Reason for Visit
+                    </label>
+                     <div class="col-sm-8 col-lg-8">
+                        <input type="text" id="visitPurpose" name="visitPurpose" class="form-control" required>
+                   
+                    </div>
+                  </div>
+                  </div>
+                  <div class="row justify-content-between text-left">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                  </div>
+                  <div class="row justify-content-between text-left">
+                    <label class="col-sm-4 col-lg-4">
+                      Enter Height
+                    </label>
+                   
+                    <div class="col-sm-8 col-lg-8">
+                        <input type="text" id="heightIn" name="heightIn" class="form-control" required>
+                  
+                       </div>
+                  </div>
+
+                  <div class="col-sm-8 col-lg-8">
+                  <label class="col-sm-4 col-lg-4">
+                    Enter Notes
+                 </label>
+                 </div>
+                 <div class="col-sm-8 col-lg-8">
+                     <input type="text" id="notes" name="notes" class="form-control" required>
+                
+                 </div>
+                  <div class="row justify-content-end">
+                      <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Add Appointment</button> </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<style>
+  body{color: #000;
+  overflow-x: hidden;
+  height: 100%;
+  background-image: url("https://res.cloudinary.com/dtca2p99y/image/upload/v1680966239/prexcription_form_xt5sje.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%}
+  .card{padding: 15px 20px;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  margin-left: 50px;
+  border: none !important;
+  
+  
+
+}
+  .blue-text{color: #00BCD4}
+  .form-control-label{margin-bottom: 0}input,
+   textarea, button{padding: 8px 15px;
+   border-radius: 5px !important;
+   margin: 5px 0px;border: 0.5px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, 
+   textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;
+    box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}
+   .btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}
+   .btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;
+   box-shadow: none !important;outline-width: 12px;}
+</style>
+

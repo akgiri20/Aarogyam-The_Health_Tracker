@@ -1,0 +1,28 @@
+<%- include('../partials/homenavbar') %> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+</head>
+<body>
+   <% for(prescription of prescriptions){%>
+    <%if(prescription.author.equals(currentUser._id)) {%>
+    <div>
+    <ul>
+    <li>Name:<%=prescription.prescriptionName%></li>
+    <li>Amount:<%=prescription.amount%></li>
+    <li>Date:<%=prescription.dateprescribed%></li>
+    <li>Doctor:<%=prescription.doctorprescribed%></li>
+    <li>Instructions:<%=prescription.generalinstructions%></li>
+    
+    </ul>
+    </div>
+    <% } %>
+   <%}%>
+</body>
+</html>
+

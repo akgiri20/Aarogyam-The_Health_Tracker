@@ -1,0 +1,331 @@
+<%- include('../partials/homenavbar') %> 
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+
+<body>
+  <div class="first">
+  <div class="pageTitle title"><h1 >ADD A DOCTOR</h1></div>
+
+  <div class="cardBox" >
+      <div class="card">
+          <div  >
+              <div class="wrapper">
+  
+                <form action="#" id="appoint-form" method="POST">
+               
+                <div class="flex-container">
+                    <div >
+                        <div  class="pageTitle title" style="text-align: center;"> ENTER NAME</div>
+                        <label for="name"></label>
+                        <input type="text" class="name formEntry" id="name" name="name" placeholder="" >
+                    </div>
+                    <div>
+                        <div class="pageTitle title" style="text-align: center;">ENTER PHONE </div>
+                        <label for="phone"></label>
+                        <input type="text" class="name formEntry"id="phone" name="phone" placeholder=""  >
+                    </div>
+                    <div>
+                        <div class="pageTitle title" style="text-align: center;">ENTER CLINIC </div>
+                        <label for="clinic"></label>
+                        <input type="text" class="name formEntry" id="clinic" name="clinic" placeholder="" >
+                       
+                      <button type="submit" class="submit formEntry" >SUBMIT </button>
+                </div>  
+                  
+                 
+                  
+                </form>
+              </div>
+            
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <video id="videoBG" poster="https://res.cloudinary.com/dtca2p99y/image/upload/v1680897523/frame_wtronk.png" autoplay muted loop>
+      <source src="https://res.cloudinary.com/dtca2p99y/video/upload/v1680901812/3_dyruag.mp4" type="video/mp4">
+    </video>
+  
+
+</body>
+ 
+
+<style>
+@media screen and (max-width:100px) {
+  .first,
+  .card,
+  .wrapper,
+  .flex-container,
+  .form,
+  .name,
+  .name:hover,
+  .pageTitle,
+  .phone,
+  .phone:hover,
+  .secondaryTitle,
+  .submit,
+  .submit:hover,
+  .termsConditions,
+  .title,
+  .wrapper
+  {
+    width:10%;
+    size: cover;
+  }
+  
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Poppins", sans-serif;
+}
+.flex-container{
+  background: transparent;
+  z-index: 5;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+   background: #eee;
+  display: grid;
+  place-items: center;
+}
+.cardBox {
+ z-index: 1;
+  width:600px;
+  height: 600px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color:rgb(141, 222, 224) ;
+  opacity: 65%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
+    rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+  
+}
+.card {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  
+  border-radius: 20px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #120000;
+  overflow: hidden;
+  padding: 20px;
+  cursor: pointer;
+ 
+}
+.card h2, span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: 800;
+  pointer-events: none;
+  opacity: 1;
+}
+
+span {
+  top: 75%;
+}
+
+.card .content h3 {
+  font-size: 3rem;
+  padding-bottom: 10px;
+}
+.card .content p {
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+.card .content {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+h1{text-align: center;}
+body {
+    cursor: pointer;
+background-color: rgb(197, 227, 227); 
+
+  
+}
+
+#title-Tag-Line {
+  font-size: 20px;
+}
+/* .card-item__bg{
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: block;
+  position: relative;
+  margin: 30px auto;
+  transform: translate(0px, 50px);
+  z-index: 5;
+} */
+
+/* form animation starts */
+.form {
+  background: #fff;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-top: 5px solid #0e3721;
+/*   z-index: 1; */
+  animation: bounce 1.5s infinite;
+}
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+.title{
+  display: block;
+  font-family: sans-serif;
+  margin: 10px auto 5px;
+  width: 300px;
+}
+.termsConditions{
+  margin: 0 auto 5px 80px;
+}
+
+.pageTitle{
+  font-size: 2em;
+  font-weight: bold;
+  
+
+}
+.secondaryTitle{
+  color: grey;
+}
+
+.name {
+  background-color: #180f0f;
+  color: white;
+}
+.name:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.phone {
+  background-color: #ebebeb;
+  height: 2em;
+}
+
+.phone:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+
+
+
+
+.formEntry {
+  display: block;
+  margin: 30px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+
+.submit {
+  width: 200px;
+  color: white;
+  background-color: #e61e1e;
+  font-size: 20px;
+
+}
+
+.submit:hover {
+  box-shadow: 20px 20px 20px 10px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid #e30f32;
+  border-radius: 0%;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+} 
+
+#videoBG{
+  position: fixed;
+  z-index: -1;
+
+
+ }
+ @media(min-aspect-ratio:16/9){
+  #videoBG{
+    width:100%;
+    height:auto;
+  }
+ }
+ @media(max-aspect-ratio:16/9){
+  #videoBG{
+    width:auto;
+    height:100%;
+  }
+ }
+
+ @media(max-width :500px){
+  #videoBG{
+    display:none;
+  }
+  body{
+    background:url('https://res.cloudinary.com/dtca2p99y/image/upload/v1680897523/frame_wtronk.png');
+    background-size:cover;
+  }
+ }
+</style>
+
+
+   
+
+   
+
+
